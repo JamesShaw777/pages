@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术 on EuanZ</title>
+    <link>http://localhost:1313/categories/%E6%8A%80%E6%9C%AF/</link>
+    <description>Recent content in 技术 on EuanZ</description>
+    <generator>Hugo</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Sun, 30 Nov 2025 20:38:07 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NordVPN 提取 WireGuard 配置文件</title>
+      <link>http://localhost:1313/post/wireguard_configuration/</link>
+      <pubDate>Sun, 30 Nov 2025 20:38:07 +0800</pubDate>
+      <guid>http://localhost:1313/post/wireguard_configuration/</guid>
+      <description>&lt;p&gt;NordVPN 宣传自己基于 WireGuard 自研了 NordLynx 协议，但实际上此协议与原生 WireGuard 完全兼容，可以完美运行在任何 WireGuard 客户端上，换句话说，&lt;strong&gt;这就是 WireGuard 协议&lt;/strong&gt;。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
