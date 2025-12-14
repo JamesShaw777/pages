@@ -4,6 +4,10 @@ languageCode = "zh-Hans"
 title = "EuanZ"
 theme = "dream"
 
+enableGitInfo = true
+enableRobotsTXT = true
+hasCJKLanguage = true
+
 # [services]
 # [services.disqus]
 # shortname = ""
@@ -47,16 +51,14 @@ siteStartYear = 2022
 # Syntax highlighting
 # customSyntaxHighlighting = true
 
-# options
 stickyNav = true
-reorderNavItems = ["about", "search", "rss", "posts", "categories", "tags"]
-# collapseNavItems = ["posts", "categories", "tags"]
+reorderNavItems = ["about", "search", "github", "posts", "categories", "tags", "rss"]
+collapseNavItems = ["posts", "categories", "tags", "rss"]
 # noDefaultSummaryCover = true
 showTableOfContents = true
-showSummaryCoverInPost = false
-# imageZoomableInPost = true
-# showPrevNextPost = true
-# reorderShares = ["x", "facebook", "whatsapp"]
+showSummaryCoverInPost = true
+imageZoomableInPost = true
+showPrevNextPost = true
 
 # [params.navItems]
 
