@@ -305,7 +305,7 @@
   <meta itemprop="description" content="IPFS是一个利用区块链技术实现分布式文件架构的一个协议。">
   <meta itemprop="datePublished" content="2025-12-18T19:32:17+08:00">
   <meta itemprop="dateModified" content="2025-12-18T19:32:17+08:00">
-  <meta itemprop="wordCount" content="574">
+  <meta itemprop="wordCount" content="545">
   <meta itemprop="image" content="http://localhost:1313/posts/%E5%85%B3%E4%BA%8Eipfs%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%A4%E8%AF%86/cover.jpg">
   <meta itemprop="keywords" content="Ipfs,Web3">
 
@@ -390,10 +390,12 @@
 
         <p>IPFS是一个利用区块链技术实现分布式文件架构的一个协议。</p>
 <h1 id="ipfs-相关笔记">IPFS 相关笔记</h1>
-<h2 id="ipfs的一些基础知识">ipfs的一些基础知识</h2>
-<p>IPFS是一个利用区块链技术实现分布式文件架构的一个协议。如果我们允许一个ipfs节点，之后通过此节点上传文件到ipfs网络中，如果其他人对我们的文件进行了同步，那么，此文件按理说就可以永远存在于互联网上。🤔听起来有些像BT，但是加上了区块链的技术，就完全是另一个东西了。</p>
-<p>CID 这个可以理解为存储在ipfs网络文件的唯一编码，有了CID，那么就可以通过ipfs网络获取到这个文件。</p>
-<p>IPFS网关 这个有点像http打通ipfs网络的一个中间件，通过ipfs网关，就算我们没有安装ipfs相关的软件，也可以通过此网关下载到ipfs网络上的东西</p>
+<h2 id="ipfs-的一些基础知识">IPFS 的一些基础知识</h2>
+<p>IPFS是一个利用区块链技术实现分布式文件架构的一个协议。如果我们建立一个 IPFS 节点，之后通过此节点上传文件到 IPFS 网络中，再顺便其他人对我们的文件进行了同步，那么，此文件按理说就可以永远存在于互联网上。🤔听起来有些像 BT，但是加上了区块链的技术，就完全是另一个东西了。</p>
+<h3 id="cid">CID</h3>
+<p>CID 这个可以理解为存储在 IPFS 网络文件的唯一编码，有了 CID，那么就可以通过 IPFS 网络获取到这个文件。</p>
+<h3 id="ipfs-网关">IPFS 网关</h3>
+<p>IPFS 网关 这个有点像 HTTP 打通 IPFS 网络的一个中间件，通过 IPFS 网关，就算我们没有安装 IPFS 相关的软件，也可以通过此网关下载到 IPFS 网络上的东西。</p>
 <h2 id="有关ipfs的项目">有关ipfs的项目</h2>
 <ul>
 <li><a href="https://github.com/zu1k/bs-core" target="_blank">https://github.com/zu1k/bs-core</a>
@@ -402,7 +404,7 @@
 <li>搜索完成后下载的时候，会检索所有公开的ipfs网关尝试下载此文件。</li>
 </ul>
 <h2 id="实际体验">实际体验？</h2>
-<p>实际体验上，ipfs给我的感觉依旧不太好，某些时候，即使文件存在于ipfs网络上，但是也取不下来，多次换ipfs网关也取不到文件，估计是网关节点相关文件已经挂掉了。</p>
+<p>实际体验上，ipfs给我的感觉依旧不太好，某些时候，即使文件存在于ipfs网络上，也取不下来，多次换ipfs网关也取不到文件，估计是网关节点相关文件已经挂掉了。</p>
 <h2 id="基于ipfs的一些设想">基于ipfs的一些设想</h2>
 <p>我感觉可以把它当oss来使用，但是响应实在太慢了，而且还有文件丢失的风险，因此，生产环境下还是需要准备一个自己的IPFS节点用于储存。毕竟，所有的东西都是有成本的，白嫖其余的存储节点还是不太现实。</p>
 
@@ -440,7 +442,12 @@
     
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#ipfs的一些基础知识">ipfs的一些基础知识</a></li>
+    <li><a href="#ipfs-的一些基础知识">IPFS 的一些基础知识</a>
+      <ul>
+        <li><a href="#cid">CID</a></li>
+        <li><a href="#ipfs-网关">IPFS 网关</a></li>
+      </ul>
+    </li>
     <li><a href="#有关ipfs的项目">有关ipfs的项目</a></li>
     <li><a href="#实际体验">实际体验？</a></li>
     <li><a href="#基于ipfs的一些设想">基于ipfs的一些设想</a></li>
@@ -519,7 +526,7 @@
 
         <div class="prose dark:prose-invert">
           <p>Hi, my name is EuanZ.</p>
-<p>This is my blog.</p>
+<p>This is my blog, inspired by nature, heritage, and the world.</p>
 
         </div>
       </div>

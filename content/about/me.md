@@ -5,5 +5,5 @@ draft: true
 ---
 
 Hi, my name is EuanZ.
- 
-This is my blog.
+
+This is my blog, inspired by nature, heritage, and the world.
