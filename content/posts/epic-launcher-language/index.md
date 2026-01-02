@@ -13,7 +13,7 @@ categories:
 tags:
   - 游戏
 # nolastmod: true
-draft: true
+# draft: true
 ---
 
 本文记录 **Epic 平台下修改《霍格沃茨之遗》语言的正确方法**，供后续查阅。
