@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="zh-Hans"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>霍格沃滋之遗EPIC语言修改方法 | EuanZ</title>
+
+    
+
+<link rel="canonical" href="http://localhost:1313/posts/epic-launcher-language/" />
+
+
+
+<meta name="author" content="EuanZ" />
+<meta name="description" content="本文记录 Epic 平台下修改《霍格沃茨之遗》语言的正确方法，供后续查阅。
+" />
+
+
+<meta name="keywords" content="游戏">
+
+
+
+<meta name="generator" content="Hugo 0.152.2">
+
+
+<meta property="og:url" content="http://localhost:1313/posts/epic-launcher-language/">
+  <meta property="og:site_name" content="EuanZ">
+  <meta property="og:title" content="霍格沃滋之遗EPIC语言修改方法">
+  <meta property="og:description" content="本文记录 Epic 平台下修改《霍格沃茨之遗》语言的正确方法，供后续查阅。">
+  <meta property="og:locale" content="zh_Hans">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-02T18:38:38+08:00">
+    <meta property="article:modified_time" content="2026-01-02T18:38:38+08:00">
+    <meta property="article:tag" content="游戏">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="霍格沃滋之遗EPIC语言修改方法">
+  <meta name="twitter:description" content="本文记录 Epic 平台下修改《霍格沃茨之遗》语言的正确方法，供后续查阅。">
+
+
+
+
+<link rel="stylesheet" href="/css/output.css" />
+
+
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.1/dist/cdn.min.js" integrity="sha256-Rmqrc5SKeSLTSnQ9shSKWmJco1ks8c1hLI8UG2Np03M=" crossorigin="anonymous"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav x-data="{ isSticky: false }"
+  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
+  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
+  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:avatar-online" @click="flip = !flip" title="翻转一下！">
+        <div class="h-10 rounded-full">
+          <img src="/img/avatar.jpg" alt="EuanZ&#39;s Blog" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="http://localhost:1313/" class="text-lg font-semibold cursor-pointer">
+          EuanZ&#39;s Blog
+        </a>
+        
+        
+      </div>
+      
+    </section>
+
+    
+    
+      
+    
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-md">
+        
+
+
+
+
+
+
+
+<li>
+  <div role="link" tabindex="0" class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title="关于">
+    <ion-icon name="information-circle"></ion-icon>关于</div>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/index.xml" title="RSS">
+    <ion-icon name="logo-rss"></ion-icon>
+    RSS
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+
+      
+      
+      
+      
+
+
+
+
+<div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title="关于">关于</div>
+
+
+
+
+
+      
+      
+
+
+
+
+
+      
+      
+
+
+
+
+
+      
+
+      <div class="dropdown dropdown-end dropdown-hover">
+        <div tabindex="0" role="button" class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" aria-label="Select an option">
+          <ion-icon class="group-hover:text-primary-content text-xl" name="menu"></ion-icon>
+        </div>
+        <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-xl">
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/index.xml" title="RSS">
+    <ion-icon name="logo-rss"></ion-icon>
+    RSS
+  </a>
+</li>
+
+
+          
+
+          
+        </ul>
+      </div>
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="lg:grid lg:grid-cols-4 gap-4 mt-4 px-4">
+  <div class="hidden lg:block">
+    
+  </div>
+
+  <div class="lg:col-span-2">
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="霍格沃滋之遗EPIC语言修改方法">
+  <meta itemprop="description" content="本文记录 Epic 平台下修改《霍格沃茨之遗》语言的正确方法，供后续查阅。">
+  <meta itemprop="datePublished" content="2026-01-02T18:38:38+08:00">
+  <meta itemprop="dateModified" content="2026-01-02T18:38:38+08:00">
+  <meta itemprop="wordCount" content="772">
+  <meta itemprop="keywords" content="游戏">
+
+      <header>
+        <h1 itemprop="headline">霍格沃滋之遗EPIC语言修改方法</h1>
+        <p class="text-sm">
+          
+            星期五, 1月 2, 2026
+          
+
+          | <span>2分钟阅读</span>
+
+          
+          | <span>更新于
+            
+              星期五, 1月 2, 2026
+            </span>
+          
+        </p>
+
+        
+        <div class="flex justify-between">
+          
+            <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    
+      <span itemprop="name">EuanZ</span>
+    
+  
+  </span>
+</div>
+
+          
+
+          <div class="flex items-center gap-2">
+  
+  
+
+  
+  
+  
+  
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://x.com/intent/post?text=%e9%9c%8d%e6%a0%bc%e6%b2%83%e6%bb%8b%e4%b9%8b%e9%81%97EPIC%e8%af%ad%e8%a8%80%e4%bf%ae%e6%94%b9%e6%96%b9%e6%b3%95&amp;url=http://localhost:1313/posts/epic-launcher-language/" target="_blank" rel="noopener noreferrer"
+      title="Share on X">
+      <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://facebook.com/sharer/sharer.php?u=http://localhost:1313/posts/epic-launcher-language/" target="_blank" rel="noopener noreferrer"
+      title="Share on Facebook">
+      <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://wa.me/?text=%e9%9c%8d%e6%a0%bc%e6%b2%83%e6%bb%8b%e4%b9%8b%e9%81%97EPIC%e8%af%ad%e8%a8%80%e4%bf%ae%e6%94%b9%e6%96%b9%e6%b3%95%20http://localhost:1313/posts/epic-launcher-language/" target="_blank" rel="noopener noreferrer"
+      title="Share on WhatsApp">
+      <ion-icon class="group-hover:text-primary-content" name="logo-whatsapp"></ion-icon>
+    </a>
+  
+
+  
+  
+</div>
+
+        </div>
+      </header>
+
+      <section id="dream-single-post-content" itemprop="articleBody">
+        
+          <figure>
+            <img class="z-30" src="p3.png" alt="霍格沃滋之遗EPIC语言修改方法" />
+            
+          </figure>
+        
+
+        <p>本文记录 <strong>Epic 平台下修改《霍格沃茨之遗》语言的正确方法</strong>，供后续查阅。</p>
+<h1 id="epic-平台霍格沃茨之遗修改语言--字幕语言方法">Epic 平台《霍格沃茨之遗》修改语言 / 字幕语言方法</h1>
+<p>最近 Epic Games 免费赠送了《霍格沃茨之遗（Hogwarts Legacy）》，<br>
+但安装并进入游戏后发现一个问题：<strong>无法在游戏内设置中修改语言或字幕语言</strong>。</p>
+<p>在网上搜索解决方案时，发现绝大多数教程都是 <strong>针对 Steam 版本</strong> 的，<br>
+对 <strong>Epic 平台完全不适用</strong>，容易误导。</p>
+<p>本文记录 <strong>Epic 平台下修改《霍格沃茨之遗》语言的正确方法</strong>，供后续查阅。</p>
+<hr>
+<h2 id="一steam-平台常见方法-epic-不适用">一、Steam 平台常见方法（⚠️ Epic 不适用）</h2>
+<p>在 Steam 版本中，通常可以通过修改 Steam API 配置文件来实现语言切换。</p>
+<h3 id="steam-常见操作步骤">Steam 常见操作步骤</h3>
+<ol>
+<li>
+<p>打开游戏安装目录：</p>
+<p>Engine\Binaries\ThirdParty\Steamworks\Steamv154\Win64\</p>
+</li>
+<li>
+<p>找到并编辑文件：</p>
+<p>steam_api64.ini</p>
+</li>
+<li>
+<p>修改语言参数，例如：</p>
+<p>Language=schinese</p>
+<p>其中：</p>
+<ul>
+<li>english 表示英语</li>
+<li>schinese 表示简体中文</li>
+</ul>
+</li>
+<li>
+<p>保存文件并重新启动游戏。</p>
+</li>
+</ol>
+<h3 id="-为什么该方法对-epic-无效">❌ 为什么该方法对 Epic 无效？</h3>
+<p>Epic 平台中：</p>
+<ul>
+<li>
+<p><strong>不存在 steam_api64.ini 文件</strong></p>
+</li>
+<li>
+<p>目录下通常只有：</p>
+<p>steam_api64.dll</p>
+</li>
+</ul>
+<p>因此，<strong>通过修改 Steam API 配置的方式在 Epic 版本中是无效的</strong>。</p>
+<hr>
+<h2 id="二epic-平台的正确修改方法推荐-">二、Epic 平台的正确修改方法（推荐 ✅）</h2>
+<p>Epic 版本的《霍格沃茨之遗》基于 <strong>Unreal Engine</strong>，<br>
+语言需要通过 <strong>启动参数（Launch Options）</strong> 指定。</p>
+<h3 id="原理说明简要">原理说明（简要）</h3>
+<p>Epic 启动游戏时，会将启动参数传递给 Unreal Engine，<br>
+其中 <code>-culture=</code> 参数用于指定游戏使用的语言 / 本地化文化。</p>
+<hr>
+<h2 id="三epic-平台修改语言的具体步骤">三、Epic 平台修改语言的具体步骤</h2>
+<h3 id="操作步骤">操作步骤</h3>
+<ol>
+<li>
+<p>打开 Epic Games Launcher</p>
+</li>
+<li>
+<p>进入 游戏库</p>
+</li>
+<li>
+<p>找到 《霍格沃茨之遗》</p>
+</li>
+<li>
+<p>点击右侧 “···” → 管理</p>
+</li>
+<li>
+<p>勾选 Launch Options（启动选项）</p>
+</li>
+<li>
+<p>在输入框中添加启动参数，例如：</p>
+<p>-culture=zh</p>
+</li>
+</ol>
+<p>示例界面如下：</p>
+<p><img src="p1.png" alt="启动参数设置示例"></p>
+<hr>
+<h2 id="四常用语言启动参数对照表">四、常用语言启动参数对照表</h2>
+<table>
+  <thead>
+      <tr>
+          <th>语言</th>
+          <th>启动参数</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>简体中文</td>
+          <td>-culture=zh</td>
+      </tr>
+      <tr>
+          <td>英语</td>
+          <td>-culture=en</td>
+      </tr>
+      <tr>
+          <td>日语</td>
+          <td>-culture=jp</td>
+      </tr>
+      <tr>
+          <td>法语</td>
+          <td>-culture=fr</td>
+      </tr>
+      <tr>
+          <td>德语</td>
+          <td>-culture=de</td>
+      </tr>
+      <tr>
+          <td>西班牙语</td>
+          <td>-culture=es</td>
+      </tr>
+  </tbody>
+</table>
+<p>其他语言代码可自行搜索：<br>
+Unreal Engine culture codes</p>
+<hr>
+<h2 id="五修改完成后的效果">五、修改完成后的效果</h2>
+<p>重新启动游戏后，<br>
+游戏界面、字幕和语音（若支持）将自动切换为指定语言。</p>
+<p>示例效果：</p>
+<p><img src="p2.png" alt="语言修改后效果"></p>
+<hr>
+<h2 id="六总结">六、总结</h2>
+<ul>
+<li>❌ Steam 的 steam_api64.ini 修改方式 <strong>不适用于 Epic</strong></li>
+<li>✅ Epic 平台应使用 <strong>启动参数 -culture=xx</strong></li>
+<li>本方法 <strong>无需修改游戏文件，安全稳定</strong></li>
+<li>适用于 Unreal Engine 系列游戏，具有通用性</li>
+</ul>
+<p>如果你也是 Epic 平台用户，希望这篇记录能帮到你。</p>
+
+        
+      </section>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <div></div>
+        
+
+        
+        <a role="button" class="btn btn-outline h-12" href="/posts/%E5%85%B3%E4%BA%8Eipfs%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%A4%E8%AF%86/" title="关于ipfs的一些认识">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 text-xs font-normal">下一页</span>
+            <span class="max-w-48 truncate">关于ipfs的一些认识</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
+
+      
+    </article>
+  </div>
+
+  <div
+    x-data="tocHighlighter()"
+    @scroll.window="debouncedScroll"
+    class="hidden lg:flex lg:flex-col lg:items-end"
+  >
+    
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一steam-平台常见方法-epic-不适用">一、Steam 平台常见方法（⚠️ Epic 不适用）</a>
+      <ul>
+        <li><a href="#steam-常见操作步骤">Steam 常见操作步骤</a></li>
+        <li><a href="#-为什么该方法对-epic-无效">❌ 为什么该方法对 Epic 无效？</a></li>
+      </ul>
+    </li>
+    <li><a href="#二epic-平台的正确修改方法推荐-">二、Epic 平台的正确修改方法（推荐 ✅）</a>
+      <ul>
+        <li><a href="#原理说明简要">原理说明（简要）</a></li>
+      </ul>
+    </li>
+    <li><a href="#三epic-平台修改语言的具体步骤">三、Epic 平台修改语言的具体步骤</a>
+      <ul>
+        <li><a href="#操作步骤">操作步骤</a></li>
+      </ul>
+    </li>
+    <li><a href="#四常用语言启动参数对照表">四、常用语言启动参数对照表</a></li>
+    <li><a href="#五修改完成后的效果">五、修改完成后的效果</a></li>
+    <li><a href="#六总结">六、总结</a></li>
+  </ul>
+</nav>
+    
+  </div>
+</div>
+
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2022 - 2026 EuanZ
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid dream-grid-about">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">About Me</div>
+
+        <div class="prose dark:prose-invert">
+          <p>Hi, my name is EuanZ.</p>
+<p>This is my blog, inspired by nature, heritage, and the world.</p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+
+  
+</div>
+
+            
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2022 - 2026 EuanZ
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
+  <script src="/js/grid.js"></script>
+
+
+
+
+<script src="/js/main.js"></script>
+
+    
+
+
+
+
+
+
+
+<script src="/js/toc.js"></script>
+
+
+  
+    <script type="module">
+      import mediumZoom from 'https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/+esm';
+      mediumZoom('#dream-single-post-content img', {
+        background: 'oklch(var(--b1))',
+        margin: 24,
+      })
+    </script>
+  
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js" integrity="sha256-/IFmi82bIhdYWctu0UddSlJqpnzWm7Vh2C4CM32wF/k=" crossorigin="anonymous"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js" integrity="sha256-mr7eJMX3VC3F7G32mk4oWp1C6a2tlMYxUdptfT7uKI8=" crossorigin="anonymous"></script>
+  </body>
+</html>

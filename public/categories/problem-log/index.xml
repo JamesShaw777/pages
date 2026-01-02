@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Problem Log on EuanZ</title>
+    <link>http://localhost:1313/categories/problem-log/</link>
+    <description>Recent content in Problem Log on EuanZ</description>
+    <generator>Hugo</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Fri, 02 Jan 2026 18:38:38 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/problem-log/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>霍格沃滋之遗EPIC语言修改方法</title>
+      <link>http://localhost:1313/posts/epic-launcher-language/</link>
+      <pubDate>Fri, 02 Jan 2026 18:38:38 +0800</pubDate>
+      <guid>http://localhost:1313/posts/epic-launcher-language/</guid>
+      <description>&lt;p&gt;本文记录 &lt;strong&gt;Epic 平台下修改《霍格沃茨之遗》语言的正确方法&lt;/strong&gt;，供后续查阅。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
