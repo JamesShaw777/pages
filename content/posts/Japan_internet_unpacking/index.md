@@ -5,7 +5,7 @@ lastmod: 2026-01-05T23:02:52+08:00
 author: EuanZ
 # avatar: /img/author.jpg
 # authorlink: https://author.site
-cover: p1.png
+cover: cover.jpg
 # images:
 #   - /img/cover.jpg
 categories:
@@ -88,7 +88,7 @@ draft: false
 
 个人认为是办理宽带的首选。
 
-![NURO 光价格示意](P1.png)
+![NURO 光价格示意](p1.png)
 
 测试 IP：`202.213.193.49`（非终端 IP）  
 接入为 **Sony 系自建光纤**，骨干及对等可能与 NTT / KDDI 等互联。
