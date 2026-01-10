@@ -6,7 +6,7 @@
     <description>Recent content in 上网 on EuanZ</description>
     <generator>Hugo</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Tue, 06 Jan 2026 00:32:23 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 06 Jan 2026 16:34:02 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/%E4%B8%8A%E7%BD%91/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NordVPN 提取 WireGuard 配置文件</title>
@@ -21,6 +21,13 @@
       <pubDate>Sun, 11 Aug 2024 23:02:52 +0800</pubDate>
       <guid>http://localhost:1313/posts/japan_internet_unpacking/</guid>
       <description>&lt;p&gt;日本上网指南（不完全）&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>中国网络情况概览</title>
+      <link>http://localhost:1313/posts/china_internet_unpacking/</link>
+      <pubDate>Tue, 22 Aug 2023 16:34:02 +0800</pubDate>
+      <guid>http://localhost:1313/posts/china_internet_unpacking/</guid>
+      <description>&lt;p&gt;目前，中国市场上主要有四家运营商，分别是，中国电信，中国联通，中国移动，以及广电&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
